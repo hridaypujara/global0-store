@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="gGq3Mjic3_fL6gfn5fGh">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="ellipse;fillColor=strokeColor;" vertex="1" parent="1">
+          <mxGeometry x="177" y="8" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="idle" style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="163" y="72" width="43" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="orderReceived" style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="9" y="180" width="119" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="driverAssigned" style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="8" y="288" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="rideInProgress" style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="9" y="396" width="117" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="rideCompleted" style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="86" y="504" width="122" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" style="ellipse;shape=endState;fillColor=strokeColor;" vertex="1" parent="1">
+          <mxGeometry x="177" y="191" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="curved=1;startArrow=none;;exitX=0.53;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="order received" style="curved=1;startArrow=none;;exitX=-0.01;exitY=0.79;entryX=0.5;entryY=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="68" y="144" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="driver assigned" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="ride in progress" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="ride completed" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.29;entryY=0;" edge="1" parent="1" source="6" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="68" y="468" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="ride ended" style="curved=1;startArrow=none;;exitX=0.71;exitY=0;entryX=0.81;entryY=1;" edge="1" parent="1" source="7" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="226" y="468" />
+              <mxPoint x="226" y="144" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.53;entryY=-0.04;" edge="1" parent="1" source="3" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

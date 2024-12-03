@@ -1,0 +1,99 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .result-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .result-item h3 {
+            margin: 0 0 5px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Search Results</h1>
+    </header>
+    <main>
+        <p>Showing results for: <strong id="search-query"></strong></p>
+        <div id="results"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Global Store</p>
+    </footer>
+    <script>
+        // Ensure the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q'); // Get the search query from the URL
+            const resultsContainer = document.getElementById('results');
+            const queryDisplay = document.getElementById('search-query');
+
+            if (query) {
+                queryDisplay.textContent = query; // Display the search query
+
+                // Mock product data for demonstration
+                const products = [
+                    { name: 'Bold Clothes', category: 'Fashion', link: 'pro-1.html' },
+                    { name: 'Personal Care Kit', category: 'Personal Care', link: 'pro-2.html' },
+                    { name: 'Furniture Set', category: 'Furniture', link: 'pro-3.html' },
+                    { name: 'Electronic Gadgets', category: 'Electronics', link: 'pro-4.html' }
+                ];
+
+                // Filter products based on the search query
+                const filteredProducts = products.filter(product =>
+                    product.name.toLowerCase().includes(query.toLowerCase())
+                );
+
+                // Display filtered results
+                if (filteredProducts.length > 0) {
+                    filteredProducts.forEach(product => {
+                        const productElement = document.createElement('div');
+                        productElement.classList.add('result-item');
+                        productElement.innerHTML = `
+                            <h3>${product.name}</h3>
+                            <p>Category: ${product.category}</p>
+                            <a href="${product.link}">View Product</a>
+                        `;
+                        resultsContainer.appendChild(productElement);
+                    });
+                } else {
+                    resultsContainer.innerHTML = '<p>No results found for your query.</p>';
+                }
+            } else {
+                queryDisplay.textContent = 'N/A';
+                resultsContainer.innerHTML = '<p>No search query provided.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
